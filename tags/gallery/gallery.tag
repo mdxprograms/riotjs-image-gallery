@@ -4,7 +4,7 @@
 
   <form id="image-search" onsubmit={submit}>
     <input type="text" name="sub">
-    <button name="submit" onclick="{formSubmit}">Show me the money</button>
+    <button name="submit" onsubmit="{formSubmit}">Show me the money</button>
   </form>
 
   <hr>
