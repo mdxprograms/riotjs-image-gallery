@@ -1,6 +1,6 @@
 <gallery>
 
-  <h1>Gifs Gallery</h1>
+  <h1>Image Gallery</h1>
 
   <form id="image-search" onsubmit={submit}>
     <input type="text" name="sub">
