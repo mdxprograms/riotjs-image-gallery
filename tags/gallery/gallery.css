@@ -1,0 +1,203 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+.content:after, .gallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  background: #eee;
+  color: #666;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-backface-visibility: hidden;
+  text-align: center;
+  font-weight: 300;
+}
+
+h1, h2 {
+  font-weight: 200;
+  color: #999;
+}
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 2.17391%;
+}
+
+p {
+  color: #666;
+}
+
+hr {
+  background: none;
+  margin: 4.34783% 0;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+a {
+  text-decoration: none;
+  color: #FF0080;
+}
+
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.content {
+  padding: 4.34783%;
+}
+.content img {
+  width: 100%;
+}
+
+.gallery {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.gallery li {
+  width: 21.73913%;
+  float: left;
+  text-align: center;
+  position: relative;
+  margin-bottom: 4.34783%;
+  display: inline-block;
+}
+.gallery li:nth-child(4n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0;
+}
+.gallery li:nth-child(4n + 2) {
+  margin-left: 26.08696%;
+  margin-right: -100%;
+  clear: none;
+}
+.gallery li:nth-child(4n + 3) {
+  margin-left: 52.17391%;
+  margin-right: -100%;
+  clear: none;
+}
+.gallery li:nth-child(4n + 4) {
+  margin-left: 78.26087%;
+  margin-right: -100%;
+  clear: none;
+}
+@media (max-width: 48rem) {
+  .gallery li {
+    width: 30.43478%;
+    float: left;
+  }
+  .gallery li:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .gallery li:nth-child(3n + 2) {
+    margin-left: 34.78261%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .gallery li:nth-child(3n + 3) {
+    margin-left: 69.56522%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+@media (max-width: 30rem) {
+  .gallery li {
+    width: 47.82609%;
+    float: left;
+  }
+  .gallery li:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .gallery li:nth-child(2n + 2) {
+    margin-left: 52.17391%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+@media (max-width: 20rem) {
+  .gallery li {
+    width: 100%;
+    float: left;
+  }
+  .gallery li:nth-child(1n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+}
+.gallery li h2 {
+  color: #999;
+  font-size: 13.5px;
+  letter-spacing: 1px;
+  margin-top: 2.17391%;
+  text-transform: uppercase;
+}
+.gallery li .imgwrap {
+  background-color: #fff;
+  padding: 8px;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.gallery li .imgmask {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Plus_font_awesome.svg/2000px-Plus_font_awesome.svg.png") 50%/25px no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  vertical-align: bottom;
+  text-align: center;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+.gallery li img {
+  width: 100%;
+  vertical-align: top;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+@media (max-width: 20rem) {
+  .gallery li img {
+    width: 100%;
+  }
+}
+.gallery li:hover img {
+  opacity: 0;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+.gallery li:hover .imgmask {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Plus_font_awesome.svg/2000px-Plus_font_awesome.svg.png") 50%/85px no-repeat;
+  opacity: 1;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+footer {
+  font-size: 14.5px;
+  text-transform: uppercase;
+}
