@@ -6,11 +6,13 @@
     <input type="text" name="sub">
     <button name="submit" onclick="{formSubmit}">Show me the money</button>
   </form>
+
   <hr>
 
   <ul class="gallery">
     <card></card>
   </ul>
+
   <hr>
 
   <script>
@@ -19,7 +21,7 @@
       load(this.sub.value);
     }
 
-    function load(sub="mechanicalkeyboards") {
+    function load(sub = "mechanicalkeyboards") {
       var request = new XMLHttpRequest;
 
       request.open('GET', 'https://www.reddit.com/r/' + sub + '.json', true)
