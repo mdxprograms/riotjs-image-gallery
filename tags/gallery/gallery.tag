@@ -2,6 +2,8 @@
 
   <h1>Image Gallery</h1>
 
+  <h3>{ title }</h3>
+
   <form id="image-search" onsubmit={submit}>
     <input type="text" name="sub">
     <button name="submit" onsubmit="{formSubmit}">Show me the money</button>
@@ -18,6 +20,7 @@
   <script>
     submit(e) {
       e.preventDefault();
+      this.title = this.sub.value.toUpperCase();
       load(this.sub.value);
     }
 
