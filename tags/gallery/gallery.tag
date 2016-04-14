@@ -10,8 +10,6 @@
   <hr>
 
   <script>
-    this.gifs = [];
-    self = this;
     function load() {
       var request = new XMLHttpRequest;
 
