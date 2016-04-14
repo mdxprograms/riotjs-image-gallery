@@ -2,6 +2,10 @@
 
   <h1>Gifs Gallery</h1>
 
+  <form id="image-search" onsubmit={submit}>
+    <input type="text" name="sub">
+    <button name="submit" onclick="{formSubmit}">Show me the money</button>
+  </form>
   <hr>
 
   <ul class="gallery">
@@ -10,22 +14,28 @@
   <hr>
 
   <script>
-    function load() {
+    submit(e) {
+      e.preventDefault();
+      load(this.sub.value);
+    }
+
+    function load(sub="mechanicalkeyboards") {
       var request = new XMLHttpRequest;
 
-      request.open('GET', 'https://www.reddit.com/r/gifs.json', true)
+      request.open('GET', 'https://www.reddit.com/r/' + sub + '.json', true)
       request.onload = function () {
         if (this.status >= 200 && this.status < 400) {
           var data = JSON.parse(request.responseText)
           var gifs = data.data.children;
-          riot.mount('card', {gifs: gifs});
+          riot.mount('card', {
+            gifs: gifs
+          });
         }
       }
       request.send();
     }
-    
+
     load();
-    
   </script>
 
 </gallery>
