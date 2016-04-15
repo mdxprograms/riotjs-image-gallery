@@ -2,6 +2,12 @@
 
   <h1>Image Gallery</h1>
 
+  <p>
+    This is a quick demonstration showing a responsive image grid using riotjs and sub reddit image thumbnails.
+  </p>
+  
+  <h3>{ title }</h3>
+
   <form id="image-search" onsubmit={submit}>
     <input type="text" name="sub">
     <button name="submit" onsubmit="{formSubmit}">Show me the money</button>
@@ -18,6 +24,7 @@
   <script>
     submit(e) {
       e.preventDefault();
+      this.title = "/r/" + this.sub.value.toLowerCase();
       load(this.sub.value);
     }
 
