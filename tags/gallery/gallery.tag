@@ -28,8 +28,9 @@
       load(this.sub.value);
     }
 
-    function load(sub = "mechanicalkeyboards") {
-      var request = new XMLHttpRequest;
+    function load(sub) {
+      var request = new XMLHttpRequest,
+        sub = sub || 'mechanicalkeyboards';
 
       request.open('GET', 'https://www.reddit.com/r/' + sub + '.json', true)
       request.onload = function () {
